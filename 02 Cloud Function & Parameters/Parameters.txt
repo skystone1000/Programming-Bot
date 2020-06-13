@@ -1,0 +1,6 @@
+Parameters for cloud function
+	
+	collection_id  => "put in double quotes"
+	environment_id => "put in double quotes"
+	url  		   => "put in double quotes"
+	iam_apikey	   => "put in double quotes"
