@@ -1,0 +1,18 @@
+Creating Node Red Application
+
+	=> Goto IBM Cloud Dashboard  => Click on "Catalog"  => Search for "Node Red"
+	=> Goto to the Node red Card => Goto Create Tab => Create Service
+
+	=> Some Plugins used for node red "Node-red-dashboard" 
+	=> You can install it from options => Pallete => Search for plugin/library
+
+
+IMPORTING
+
+	=> After Creating you can simply import my "flow.json" File from options
+	=> Once imported You need to change the assistant node parameters
+		- API Key
+		- Service Endpoint
+		- Workspace ID
+	=> Once done Click Deploy 
+	=> You can goto UI & Start Asking Questions

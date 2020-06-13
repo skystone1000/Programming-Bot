@@ -1,0 +1,201 @@
+[
+    {
+        "id": "8adbb66.a37bf48",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "d455a425.7a5dd8",
+        "type": "inject",
+        "z": "8adbb66.a37bf48",
+        "name": "",
+        "topic": "",
+        "payload": "hello",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 270,
+        "y": 180,
+        "wires": [
+            [
+                "931fbb44.0d3048"
+            ]
+        ]
+    },
+    {
+        "id": "551a26db.5a76a8",
+        "type": "debug",
+        "z": "8adbb66.a37bf48",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 890,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "931fbb44.0d3048",
+        "type": "watson-conversation-v1",
+        "z": "8adbb66.a37bf48",
+        "name": "PyBot",
+        "workspaceid": "c0ed86f3-d697-4995-90cf-41b5117730a6",
+        "multiuser": false,
+        "context": false,
+        "empty-payload": false,
+        "service-endpoint": "https://api.eu-gb.assistant.watson.cloud.ibm.com/instances/593fcd21-19db-4852-8d89-5fab00ff6b7b",
+        "timeout": "0.5 ",
+        "optout-learning": false,
+        "x": 530,
+        "y": 240,
+        "wires": [
+            [
+                "f2fc3e94.4f2f38"
+            ]
+        ]
+    },
+    {
+        "id": "f2fc3e94.4f2f38",
+        "type": "function",
+        "z": "8adbb66.a37bf48",
+        "name": "parsing",
+        "func": "msg.payload = msg.payload.output.text[0];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 700,
+        "y": 240,
+        "wires": [
+            [
+                "551a26db.5a76a8",
+                "4347d573.0903fc"
+            ]
+        ]
+    },
+    {
+        "id": "32cbfb4.f0d9c04",
+        "type": "ui_form",
+        "z": "8adbb66.a37bf48",
+        "name": "",
+        "label": "",
+        "group": "14d728bf.860eaf",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Enter Your Question Here",
+                "value": "text",
+                "type": "text",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "text": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "",
+        "x": 70,
+        "y": 220,
+        "wires": [
+            [
+                "c8cabcad.be17b8",
+                "6ada69d5.eb2688"
+            ]
+        ]
+    },
+    {
+        "id": "c8cabcad.be17b8",
+        "type": "function",
+        "z": "8adbb66.a37bf48",
+        "name": "input parsing",
+        "func": "msg.payload=msg.payload.text;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 270,
+        "y": 300,
+        "wires": [
+            [
+                "de573e13.03dcd8",
+                "931fbb44.0d3048"
+            ]
+        ]
+    },
+    {
+        "id": "de573e13.03dcd8",
+        "type": "ui_text",
+        "z": "8adbb66.a37bf48",
+        "group": "14d728bf.860eaf",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "You : ",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "x": 530,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "4347d573.0903fc",
+        "type": "ui_text",
+        "z": "8adbb66.a37bf48",
+        "group": "14d728bf.860eaf",
+        "order": 6,
+        "width": "20",
+        "height": "8",
+        "name": "",
+        "label": "Bot : ",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 890,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "6ada69d5.eb2688",
+        "type": "ui_text",
+        "z": "8adbb66.a37bf48",
+        "group": "14d728bf.860eaf",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Hello, I’m PyBot, your Python Assistant.",
+        "format": "",
+        "layout": "row-center",
+        "x": 340,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "14d728bf.860eaf",
+        "type": "ui_group",
+        "z": "",
+        "name": "PyBot",
+        "tab": "4b570fbc.199d98",
+        "order": 1,
+        "disp": true,
+        "width": "20",
+        "collapse": false
+    },
+    {
+        "id": "4b570fbc.199d98",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Virtual Python Services",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
