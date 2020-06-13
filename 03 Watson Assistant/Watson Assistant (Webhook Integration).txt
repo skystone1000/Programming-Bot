@@ -1,0 +1,10 @@
+Watson Assistant (Webhook Integration)
+	
+	=> Watson Assistant Dashboard => goto your Assistant (or create new)
+	=> Import Skill  => Options  =>  Webhooks  
+	=> Paste your Cloud Function URL 
+
+	URL - "CloudFunctionUrl.json"
+
+======================================================
+Note: Do not forget to add .json at the end of webhook
