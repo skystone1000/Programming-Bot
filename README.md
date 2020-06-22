@@ -1,6 +1,6 @@
 # Intelligent Customer Help Desk with Smart Document Understanding
 Tutorial Link - https://youtu.be/PDhXQVHFA7c<br><br>
-Smart Bridge 4 Week Internship <br>
+
 Ref - https://github.com/ibm/watson-discovery-sdu-with-assistant
 
 Node Red (UI) - https://noderedfirstapplication.mybluemix.net/ui/ <br>
@@ -17,6 +17,13 @@ There are main 4 setps in creating the bot:<br>
  Step 4 - Assembling Everything in Node Red <br>
  
  All the files required are organised in the folderwise structure.
+ 
+ ### Things to be Done 
+ 1) Adding different Code snippet in the ouput<br>
+ 2) Try to implement support for C++, JAVA <br>
+ 3) ~~Add support for links <br>~~
+ 4) ~~Add support for links<br>~~
+ 5) Get more documentation for various languages including most popular issues on stack overflow, etc<br>
  
  ### Contributing 
  Create a New issue for dissusing the feature you want to add
