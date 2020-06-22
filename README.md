@@ -8,7 +8,7 @@ Node Red (Flow) - https://noderedfirstapplication.mybluemix.net/red/
 
 ### Implementation
 
-First Clone the repository: https://github.com/skystone1000/llSPS-INT-1855-Intelligent-Customer-Help-Desk-with-Smart-Document-Understanding
+First Clone the repository: https://github.com/skystone1000/Programming-Bot
 
 There are main 4 setps in creating the bot:<br>
  Step 1 - Watson Discovery Service 	<br>
