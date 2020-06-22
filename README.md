@@ -1,4 +1,4 @@
-# Intelligent Customer Help Desk with Smart Document Understanding
+# Intelligent Programmer Help Desk with Smart Document Understanding
 Tutorial Link - https://youtu.be/PDhXQVHFA7c<br><br>
 
 Ref - https://github.com/ibm/watson-discovery-sdu-with-assistant
